@@ -8,8 +8,10 @@ html{
 }
 
 body{
-
+   
     width:1024px;
+    padding-left: 5px;
+    padding-right:5px;
 }
 
 header{
@@ -30,6 +32,7 @@ header{
 
 .header_title{
     font-size:25px;
+    
 }
 .header_button_zone button{
     background-color: #F8F9FA;
@@ -55,6 +58,7 @@ header{
 }
 header svg{
     margin-top:10px;
+    margin-left:10px;
 }
 nav{
     display: flex;
@@ -90,9 +94,114 @@ nav select{
     width:96px;
     height:32px;
     opacity: 80%;
+    
 }
 
 option{
     background-color: white;
 
+}
+article{
+    box-sizing: border-box;
+    background-color: white;
+    width:236px;
+    margin-right:20px;
+    margin-top:30px;
+    height:370px;
+    border-radius: 5px;;
+    box-shadow: rgb(0 0 0 / 4%) 0px 4px 16px;
+    
+    
+}
+article:hover{
+    transform: translateY(-10px);
+    transition-duration:0.7s;
+}
+article img{
+    width: 100%;
+    position: relative;
+    overflow:hidden ;
+    border-top-left-radius:  5px;
+    border-top-right-radius:  5px;
+    height:44%;
+}
+.article_profile img{
+    width:24px;
+    height:24px;
+    border-radius: 50%;
+    position: relative;
+    top:7px;
+    margin-right:5px;
+}
+.article_textzone{
+    height:45%;
+    padding-left:10px;
+    padding-right:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 0.001px solid #F1F3F5;
+
+}
+article span{
+    margin-bottom: 10px;
+}
+.article_textzone h4{
+    margin-top:10px;
+    margin-bottom:5px;
+    font-size: 15px;;
+    opacity:90%;
+}
+.article_textzone span{
+    font-size: 13px;
+    opacity: 60%;;
+}
+.article_profile{
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    padding-left:8px;
+    padding-right:10px;
+    align-items: center;
+}
+.article_profile span{
+    margin-bottom:0px;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+       
+}
+img .material-symbols-outlined{
+   font-size: 15px!important;
+}
+
+.profile_like{
+    position: relative;
+    top:5px;
+}
+@media (max-width:1050px){
+    article{
+        width:30%;
+        height: 53%;
+        
+    }
+}
+@media (max-width:794px){
+
+    article{
+        width:40%;
+        height: 37%;
+    }
+}
+
+@media (max-width:580px){
+
+    article{
+        width:65%;
+        height:21%;
+        margin-left:20%;
+    }
 }
