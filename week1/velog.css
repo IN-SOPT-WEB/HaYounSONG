@@ -14,7 +14,7 @@ body{
 
 header{
     display: flex;
-    margin-top:20px;
+    margin-top:15px;
     justify-content: space-between;
 }
 
@@ -34,14 +34,15 @@ header{
 .header_button_zone button{
     background-color: #F8F9FA;
     border: none;
-    margin-right:13px;
+    margin-right:4px;
     font-size: 16px;
 }
 .header_button_zone div{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right:5px;
+    margin-right:3px;
+    margin-left:8px;
 }
 
 .header_write{
@@ -54,4 +55,44 @@ header{
 }
 header svg{
     margin-top:10px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top:40px;
+}
+
+nav button{
+    background-color: #F8F9FA;
+    border: none;
+    font-size: 18px;
+    border-bottom: 2px solid black;
+    height: 50px;
+    width:110px
+}
+
+.nav_unselected_button{
+    color: gray;
+    opacity: 70%;
+    font-weight: 100;
+    border-bottom:none;
+}
+.material-symbols-outlined{
+    position: relative;
+    top:4px;
+    margin-right:10px;
+    font-weight: bold;
+}
+
+nav select{
+    border: none;
+    font-size:14px;
+    width:96px;
+    height:32px;
+    opacity: 80%;
+}
+
+option{
+    background-color: white;
+
 }
