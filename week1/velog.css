@@ -1,0 +1,57 @@
+@import "reset.css";
+
+html{
+    background-color:#F8F9FA;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sans KR', sans-serif!important;
+}
+
+body{
+
+    width:1024px;
+}
+
+header{
+    display: flex;
+    margin-top:20px;
+    justify-content: space-between;
+}
+
+.header_button_zone{
+    display: flex;
+}
+
+.profile{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+
+.header_title{
+    font-size:25px;
+}
+.header_button_zone button{
+    background-color: #F8F9FA;
+    border: none;
+    margin-right:13px;
+    font-size: 16px;
+}
+.header_button_zone div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:5px;
+}
+
+.header_write{
+    border: 1px solid black!important;
+    border-radius: 15px;
+    padding-left:15px;
+    padding-right:15px;
+    height:32px;
+    margin-top:3px;
+}
+header svg{
+    margin-top:10px;
+}
