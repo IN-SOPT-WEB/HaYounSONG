@@ -2,6 +2,10 @@
 
 let taglist=[];
 
+if(localStorage.getItem('tag')){
+taglist=JSON.parse(localStorage.getItem('tag'));
+}
+
 function Tag(){
 
     const addTag=(input)=>{
@@ -9,6 +13,7 @@ function Tag(){
         const currentValue=input.value;
         let alreadyTag=false;
         for(let i=0;i<taglist.length;i++){
+
             if(taglist[i]===currentValue){
                 alreadyTag=true;
 
@@ -20,6 +25,7 @@ function Tag(){
             currentTag.innerHTML=currentValue;
             currentUl.appendChild(currentTag);
             input.value="";
+            localStorage.setItem('tag', JSON.stringify(taglist));
         }
         else{
             alert("이미 있는 태그입니다!")

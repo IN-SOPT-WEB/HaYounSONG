@@ -39,9 +39,16 @@
             <button class="nav_unselected_button" ><span class="material-symbols-outlined">
                 schedule
                 </span>최신</button>
-            <select >
-                <option value="이번 주" selected>이번 주</option>
-            </select>
+            <div class="day-select">
+                <span class="in-day-select">오늘</span>
+                <svg class="in-day-select"stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"></path></svg>
+            </div>
+            <ul class="hidden day-select__ul">
+                <li class="day-selected">오늘</li>
+                <li>이번 주</li>
+                <li>이번 달</li>
+                <li style="border-bottom:0px;">올해</li>
+            </ul>
         </div>
         <span style="font-weight: bold;color: gray;"class="material-symbols-outlined">
             more_vert
@@ -157,4 +164,5 @@
       
     </section>
 </body>
+<script src="velog.js"></script>
 </html>
