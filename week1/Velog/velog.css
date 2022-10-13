@@ -10,8 +10,7 @@ html{
 body{
    
     width:1024px;
-    padding-left: 5px;
-    padding-right:5px;
+    padding : 0 5px;
 }
 
 header{
@@ -20,7 +19,7 @@ header{
     justify-content: space-between;
 }
 
-.header_button_zone{
+.header__button_zone{
     display: flex;
 }
 
@@ -30,17 +29,17 @@ header{
     border-radius: 50%;
 }
 
-.header_title{
+.header__title{
     font-size:25px;
     
 }
-.header_button_zone button{
+.header__button_zone button{
     background-color: #F8F9FA;
     border: none;
     margin-right:4px;
     font-size: 16px;
 }
-.header_button_zone div{
+.header__button_zone div{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,11 +47,10 @@ header{
     margin-left:8px;
 }
 
-.header_write{
+.header__write{
     border: 1px solid black!important;
     border-radius: 15px;
-    padding-left:15px;
-    padding-right:15px;
+    padding : 0 15px;
     height:32px;
     margin-top:3px;
 }
@@ -135,8 +133,7 @@ article img{
 }
 .article_textzone{
     height:45%;
-    padding-left:10px;
-    padding-right:10px;
+    padding : 0 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
