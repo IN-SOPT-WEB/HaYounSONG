@@ -1,4 +1,4 @@
-@import "reset.css";
+@import "../reset.css";
 html,button.h1,h2,h3,h4,span,div{
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -42,7 +42,7 @@ main{
  
 }
 section{
-    width:50%;
+    width:100%;
     color: #006EFF; 
    
     display: flex;
@@ -51,11 +51,20 @@ section{
     padding-right:50px;
     
 }
+.section_input{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
 section h2{
     margin-bottom:50px;
 }
-section div{
 
+ul{
+    height:400px;
+    
+}
+li{
     color: black;
     box-sizing: border-box;
     height: 50px;
@@ -63,17 +72,16 @@ section div{
     display: flex;
     justify-content: space-between;
 }
-article{
-    height:450px;
-    
-}
 .material-symbols-outlined {
     
     font-size: 35px!important;
 }
 
 input{
-    width: 90%;
+    width: 100%;
+    color: black;
+    font-size:24px;
+   
 }
 
 button{
@@ -89,4 +97,10 @@ footer{
     justify-content: center;
     align-items: center;
     color:white;
+}
+
+.hidden{
+    width:0;
+    display: none;
+   
 }
