@@ -1,0 +1,27 @@
+
+
+body{
+    padding-top:10px;
+}
+ul{
+    display: inline;
+    padding-left: 0;
+}
+li{
+    display: inline;
+    padding:10px 15px;
+    background-color: #c3c5ca81;
+    color: rgb(7, 149, 7);
+    border-radius: 25%;
+
+}
+.tag-input{
+
+    border: none;
+    outline: 0px;
+    font-size: 16px;
+}
+
+.tag-input:hover{
+    border: 0;
+}

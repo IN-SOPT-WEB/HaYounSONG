@@ -37,7 +37,12 @@ header{
     background-color: #F8F9FA;
     border: none;
     margin-right:4px;
+    margin-top:6px;
     font-size: 16px;
+}
+.header__button_zone button:hover{
+    background-color: black;
+    color: white;
 }
 .header__button_zone div{
     display: flex;
