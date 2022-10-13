@@ -9,11 +9,11 @@ ul{
 }
 li{
     display: inline;
-    padding:10px 15px;
+    padding:10px 10px;
     background-color: #c3c5ca81;
     color: rgb(7, 149, 7);
-    border-radius: 25%;
-
+    border-radius: 10px;
+    margin-right:10px;
 }
 .tag-input{
 
