@@ -32,13 +32,11 @@ today.addEventListener("click", viewToday)
 tomorrow.addEventListener("click",viewTomorrow)
 allday.addEventListener("click",viewAllday)
 
-
-
 }
 
 
-// function useTodoList({container,input,submit}){
-//     const onAdd=()=>{
+function useTodoList(){
+    // const onAdd=()=>{
             
 // const currentValue=input.value;
 // const currentLi=document.createElement("li");
@@ -60,7 +58,7 @@ allday.addEventListener("click",viewAllday)
 //     })
 // currentDeleteButton.addEventListner("click",)
 
-// }
+}
 
    
     
@@ -68,13 +66,8 @@ allday.addEventListener("click",viewAllday)
 function main(){
     
     
-    useViewState({
-        
-        // leftPanel:$(".left-section"),
-        // rightPanel:`$(".right-section")`,
-        // todayButton:`$("#today_button")`
-    })
-    // console.log(leftPanel.classList[0])
+    useViewState();
+
 
 }
 
@@ -82,11 +75,3 @@ function main(){
 
 
 main();
-
-// const todayButton=document.querySelector('.today_button nav_button')
-// console.log(todayButton)
-// todayButton.addEventListner("click",function(){
-//     alert("ss");
-// });
-
-
