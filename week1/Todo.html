@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Todo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+ 
+    <header>
+
+        <h1 class="header_title">
+            📌 ToDo LIST
+        </h1>
+    </header>
+
+    <nav>
+        <button class="nav_button" >오늘만 보기</button>
+        <button class="nav_button">내일만 보기</button>
+        <button class="nav_button">함께 보기</button>
+    </nav>
+
+
+    <main>
+
+        <section name="left-section"style="border-right:3px solid #006EFF;">
+
+            <h2>오늘 할일</h2>
+            <article></article>
+            <div class="section_input">
+                <input/>
+                <button>
+                    <span class="material-symbols-outlined">
+                        add
+                        </span>
+                    </button>
+            </div>
+        </section>
+
+        <section name="right-section">
+            <h2>내일 할일</h2>
+            <article>
+                <!-- 여기서 article을 쓰는게 맞을까..? semantic 해지기 위한 고민.... -->
+            <div>• SOPT 스터디 기록하기
+                
+                <span class="material-symbols-outlined">
+                    delete
+                    </span>
+            </div>
+            <div>• SOPT 갈 준비 하기
+                <span class="material-symbols-outlined">
+                    delete
+                    </span>
+            </div>
+        </article>
+            <div class="section_input">
+            <input/><button>
+                <span class="material-symbols-outlined">
+                    add
+                    </span>
+                </button>
+            
+        </div>
+        </section>
+       
+    </main>
+    <footer>
+        <span>Copy Right @In SOPT</span>
+        </footer>
+</body>
+</html>
