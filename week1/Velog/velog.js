@@ -78,10 +78,46 @@ function modal(){
 
 }
 
+function slide(){
+
+    const articles=document.querySelectorAll('article');
+    const left_slide=document.querySelector('.left-slide');
+    const right_slide=document.querySelector('.right-slide')
+    let article_index=0;
+    function go_left(articles){
+       
+        if(article_index!=0){
+            article_index=article_index+1;
+            console.log(article_index);
+        for(let i=0;i<articles.length;i++){
+            
+        articles[i].style.transform=`translate(${(article_index)*256}px, 0px)`;
+        articles[i].style.transition=`1s`;
+    }
+}
+    }
+    function go_right(articles){
+        
+         if(article_index>-(articles.length-4)){
+             article_index=article_index-1;
+             console.log(article_index);
+         for(let i=0;i<articles.length;i++){
+             
+         articles[i].style.transform=`translate(${(article_index)*256}px, 0px)`;
+         articles[i].style.transition=`1s`;
+     }
+ }
+     }
+    left_slide.addEventListener('click',()=>go_left(articles))
+    right_slide.addEventListener('click',()=>go_right(articles))
+
+}
+
 function main(){
 
     listView();
     modal();
+    slide();
 }
 
 main();
