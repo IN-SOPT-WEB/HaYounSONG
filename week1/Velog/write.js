@@ -8,6 +8,14 @@ taglist=JSON.parse(localStorage.getItem('tag'));
 
 function Tag(){
 
+    for(let i=0;i<taglist.length;i++){
+        const currentUl=document.querySelector(".tag-list");
+        const currentValue=taglist[i];
+        const currentTag=document.createElement("li");
+            currentTag.innerHTML=currentValue;
+            currentUl.appendChild(currentTag);
+    }
+    
     const addTag=(input)=>{
         const currentUl=document.querySelector(".tag-list");
         const currentValue=input.value;

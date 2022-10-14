@@ -44,10 +44,44 @@ function listView(){
 
 }
 
+function modal(){
+    const articles=document.querySelectorAll("section article");
+    const body=document.querySelector('body');
+    
+    
+    function viewModal(article,body){
+        
+        const modal__area=document.createElement('div')
+        modal__area.className='modal__area';
+        body.appendChild(modal__area);
+        body.style.overflow='hidden';  
+        
+        const article__clone=article.cloneNode(true);
+        modal__area.appendChild(article__clone);
+
+        function closeModal(modal__area,body){
+            modal__area.remove();
+            body.style.overflow='scroll';
+        }
+        const close_button=document.createElement('button');
+        close_button.className='close-button'
+        close_button.innerHTML="X";
+        
+        close_button.addEventListener('click',()=>closeModal(modal__area,body))
+        modal__area.appendChild(close_button)
+
+    }
+
+    for(let i=0;i<articles.length;i++){
+        articles[i].addEventListener('click',()=>viewModal(articles[i],body))
+    }
+
+}
 
 function main(){
 
     listView();
+    modal();
 }
 
 main();
