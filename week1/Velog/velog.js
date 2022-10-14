@@ -51,7 +51,7 @@ function modal(){
     
     function viewModal(article,body){
         
-        const modal__area=document.createElement('div')
+        const modal__area=document.createElement('html')
         modal__area.className='modal__area';
         body.appendChild(modal__area);
         body.style.overflow='hidden';  
@@ -59,9 +59,16 @@ function modal(){
         const article__clone=article.cloneNode(true);
         modal__area.appendChild(article__clone);
 
+        const slides=document.querySelectorAll('.slide');
+        for(let i=0;i<slides.length;i++){
+            slides[i].style.display='none';
+        }
         function closeModal(modal__area,body){
             modal__area.remove();
             body.style.overflow='scroll';
+            for(let i=0;i<slides.length;i++){
+                slides[i].style.display='block';
+            }x``
         }
         const close_button=document.createElement('button');
         close_button.className='close-button'
@@ -70,7 +77,7 @@ function modal(){
         close_button.addEventListener('click',()=>closeModal(modal__area,body))
         modal__area.appendChild(close_button)
 
-    }
+    }xwx``
 
     for(let i=0;i<articles.length;i++){
         articles[i].addEventListener('click',()=>viewModal(articles[i],body))
@@ -88,7 +95,6 @@ function slide(){
        
         if(article_index!=0){
             article_index=article_index+1;
-            console.log(article_index);
         for(let i=0;i<articles.length;i++){
             
         articles[i].style.transform=`translate(${(article_index)*256}px, 0px)`;
@@ -100,7 +106,6 @@ function slide(){
         
          if(article_index>-(articles.length-4)){
              article_index=article_index-1;
-             console.log(article_index);
          for(let i=0;i<articles.length;i++){
              
          articles[i].style.transform=`translate(${(article_index)*256}px, 0px)`;
