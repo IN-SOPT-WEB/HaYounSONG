@@ -12,7 +12,7 @@ function App() {
       <main className='Mobile'>
 
       <Header></Header>
-      <Content current_score={current_score}></Content>
+      <Content current_score={current_score} set_score={set_current_score}></Content>
       </main>
     </div>
   );

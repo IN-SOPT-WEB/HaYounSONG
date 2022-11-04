@@ -1,16 +1,26 @@
 import React from 'react'
-import Answer_zone from './content/Answer_zone'
+import Answerzone from './content/Answerzone'
 import Quiz from './content/Quiz'
 import Restart from './content/Restart'
 import Score from './content/Score'
 
-export default function Content({current_score}) {
+export default function Content({current_score,set_score}) {
+  
+
+  if(current_score===5){
+    return(
+      <section className='component'>
+        <div className='finish_text'>끝!</div>
+        <Restart set_score={set_score}></Restart>
+        </section>
+    )
+  }
   return (
     <section className='component'>
       <Score current_score={current_score}></Score>
-      <Quiz></Quiz>
-      <Answer_zone></Answer_zone>
-      <Restart></Restart>
+      <Quiz current_score={current_score}></Quiz>
+      <Answerzone current_score={current_score} set_score={set_score}></Answerzone>
+      <Restart set_score={set_score}></Restart>
       
     </section>
   )
