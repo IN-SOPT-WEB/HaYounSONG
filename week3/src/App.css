@@ -1,0 +1,29 @@
+@import "reset.css";
+html,button.h1,h2,h3,h4,span,div{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.App{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.Mobile{
+  background-color: black;
+  width:400px;
+
+  height:720px;
+}
+
+.Restart{
+  position: fixed;
+  bottom:0px;
+}
+.Restart-button{
+  background-color: wheat;
+  width: 100%;
+}
+  
