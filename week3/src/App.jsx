@@ -1,15 +1,19 @@
 
-import './App.css';
-import Content from './Content';
+import './css/App.css';
+import Content from './components/Content';
+import Header from './components/header/Header';
+import { useState } from 'react';
 
 function App() {
+  
+  const [current_score,set_current_score]=useState(0)
   return (
     <div className="App">
-      <div className='Mobile'>
+      <main className='Mobile'>
 
-
-      <Content></Content>
-      </div>
+      <Header></Header>
+      <Content current_score={current_score}></Content>
+      </main>
     </div>
   );
 }

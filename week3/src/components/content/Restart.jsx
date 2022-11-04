@@ -5,9 +5,9 @@ export default function Restart(){
 
         <footer className="Restart">
         
-        <div className="Restart-button">
-            시작
-        </div>
+        <button className="Restart-button">
+            다시 시작하기!
+        </button>
         
         </footer>
     )

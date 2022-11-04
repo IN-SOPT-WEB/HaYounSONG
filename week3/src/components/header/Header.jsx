@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <div>
-      
-    </div>
+    <header className='Header'>
+      너 누구얏!
+    </header>
   )
 }
