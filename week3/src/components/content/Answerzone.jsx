@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
-export default function Answerzone({current_score,set_score}){
+export default function Answerzone({current_score,set_score,setonModal,setcheckcorrect}){
     const [answer,setanswer]=useState([])
     const quiz_answer=[1,0,1,2,3]
     useEffect(()=>{
@@ -31,10 +31,18 @@ export default function Answerzone({current_score,set_score}){
           }
         },[current_score])
 
-        const button_clicked=(e)=>{
+        const button_clicked=(e)=>{ 
             if(e.target.value==quiz_answer[current_score]){
+                setcheckcorrect(true)
+                setonModal(true)
                 set_score(current_score+1)
                 current_score++;
+                
+                
+            }
+            else{
+                setcheckcorrect(false)
+                setonModal(true)
             }
         }
     return(
