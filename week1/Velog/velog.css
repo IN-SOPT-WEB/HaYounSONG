@@ -5,13 +5,14 @@ html{
     display: flex;
     justify-content: center;
     font-family: 'Noto Sans KR', sans-serif!important;
+    height:100%;
 }
 
 body{
    
     width:1024px;
-    padding-left: 5px;
-    padding-right:5px;
+    padding : 0 5px;
+    height:100%;
 }
 
 header{
@@ -20,7 +21,7 @@ header{
     justify-content: space-between;
 }
 
-.header_button_zone{
+.header__button_zone{
     display: flex;
 }
 
@@ -30,17 +31,22 @@ header{
     border-radius: 50%;
 }
 
-.header_title{
+.header__title{
     font-size:25px;
     
 }
-.header_button_zone button{
+.header__button_zone button{
     background-color: #F8F9FA;
     border: none;
     margin-right:4px;
+    margin-top:6px;
     font-size: 16px;
 }
-.header_button_zone div{
+.header__write:hover{
+    background-color: black;
+    color: white;
+}
+.header__button_zone div{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,11 +54,10 @@ header{
     margin-left:8px;
 }
 
-.header_write{
+.header__write{
     border: 1px solid black!important;
     border-radius: 15px;
-    padding-left:15px;
-    padding-right:15px;
+    padding : 0 15px;
     height:32px;
     margin-top:3px;
 }
@@ -64,6 +69,7 @@ nav{
     display: flex;
     justify-content: space-between;
     margin-top:40px;
+    height:50px;
 }
 
 nav button{
@@ -73,6 +79,10 @@ nav button{
     border-bottom: 2px solid black;
     height: 50px;
     width:110px
+}
+.nav_checkzone{
+    display: flex;
+    align-items: center;
 }
 
 .nav_unselected_button{
@@ -87,30 +97,66 @@ nav button{
     margin-right:10px;
     font-weight: bold;
 }
-
-nav select{
+li::marker{
+    display: none;
+}
+.day-select{
     border: none;
     font-size:14px;
     width:96px;
     height:32px;
     opacity: 80%;
-    
+    background-color: white;
+    font-size:15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-option{
-    background-color: white;
+.day-select:hover{
+    color: gray;
 
+}
+
+.day-select__ul{
+    list-style: none;
+    padding-left: 0px;
+    position: relative;
+    right:29%;
+    top:220%;
+    z-index: 1;
+    background-color: white;
+    width:150px;
+    height:160px;
+}
+.day-selected{
+    color: rgb(139, 203, 43);
+}
+.day-select__ul li{
+    padding-left:10px;
+    padding-top:10px;
+    padding-bottom:5px;
+    font-size:15px;
+    border: 1px solid rgba(212, 212, 212, 0.3);
+    
+}
+.day-select__ul li:hover{
+    background-color: rgba(212, 212, 212, 0.3);
+}
+.hidden{
+    display: none;
 }
 article{
     box-sizing: border-box;
     background-color: white;
-    width:236px;
-    margin-right:20px;
+    min-width:236px;
+    margin-left:10px;
+    margin-right:10px;
     margin-top:30px;
     height:370px;
     border-radius: 5px;;
     box-shadow: rgb(0 0 0 / 4%) 0px 4px 16px;
-    
+    position: relative;
     
 }
 article:hover{
@@ -135,8 +181,7 @@ article img{
 }
 .article_textzone{
     height:45%;
-    padding-left:10px;
-    padding-right:10px;
+    padding : 0 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -170,9 +215,9 @@ article span{
 
 section{
     display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-       
+    /* flex-wrap: wrap; */
+    height: 400px;
+    overflow: hidden;
 }
 img .material-symbols-outlined{
    font-size: 15px!important;
@@ -204,4 +249,67 @@ img .material-symbols-outlined{
         height:21%;
         margin-left:20%;
     }
+}
+
+.modal__area{
+    width: 100%;
+    min-height:100vh;
+    background-color: rgb(0,0,0,0.5);
+    position: fixed;
+    top:0%;
+    left:0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.close-button{
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-top:20px;  
+    padding:0px 10px;
+}
+.slide-area{
+    width: 1024px;
+    position: fixed;
+    display: flex;
+    height: 400px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.left-slide{
+    background-color: rgb(0,0,0,0.5);
+    width:30px;
+    height:30px;
+    z-index: 1;
+    color: white;
+    font-size:20px;
+    text-align: center;
+    position: fixed;
+    top:300px;
+    right:90%;
+       
+    /* right:108vh;
+    top:320px; */
+}
+
+.right-slide{
+    background-color: rgb(0,0,0,0.5);
+    width:30px;
+    height:30px;
+    z-index: 1;
+    color: white;
+    font-size:20px;
+    text-align: center;
+    position:relative;
+    top:300px;
+    left: 90%;
+    position: fixed;
+    /* left:108vh;
+    top:320px; */
 }
