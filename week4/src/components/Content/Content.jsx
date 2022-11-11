@@ -3,11 +3,16 @@ import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom';
 export default function Content({userData}){
     
+    const navigate=useNavigate()
+    const CloseUserinfo=()=>{
+
+        navigate("/search")
+    }
 
     return (
      
     <Styled.Content>
-    <Styled.CloseButton>X</Styled.CloseButton>
+    <Styled.CloseButton onClick={()=>CloseUserinfo()} >X</Styled.CloseButton>
     {/* {userData[0]?.name} */}
     <Styled.UserImage src={userData.avatar_url}></Styled.UserImage>
     <Styled.UserName>{userData.name}</Styled.UserName>
