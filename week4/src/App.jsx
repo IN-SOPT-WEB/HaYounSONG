@@ -1,8 +1,5 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import Content from './components/Content/Content';
-import GlobalStyles from './components/GlobalStyles';
-import Header from './components/Header/Header';
 import { BrowserRouter, Routes, Route,Outlet,useParams } from "react-router-dom";
 import Search from './pages/Search';
 import SearchId from './pages/SearchId';

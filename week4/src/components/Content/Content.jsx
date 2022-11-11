@@ -1,21 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-
+import { useNavigate } from 'react-router-dom';
 export default function Content({userData}){
     
+
     return (
      
     <Styled.Content>
+    <Styled.CloseButton>X</Styled.CloseButton>
     {/* {userData[0]?.name} */}
-    <Styled.UserImage src={userData[0]?.avatar_url}></Styled.UserImage>
-    <Styled.UserName>{userData[0]?.name}</Styled.UserName>
+    <Styled.UserImage src={userData.avatar_url}></Styled.UserImage>
+    <Styled.UserName>{userData.name}</Styled.UserName>
     
     <Styled.UserFollow>
-        팔로워:{userData[0]?.followers}  
+        팔로워:{userData.followers}  
     </Styled.UserFollow>
     <Styled.UserFollow>
 
-        팔로잉:{userData[0]?.following}
+        팔로잉:{userData.following}
 
     </Styled.UserFollow>
     <Styled.Userlink>깃허브 바로가기</Styled.Userlink>
@@ -42,13 +44,13 @@ const Styled={
       font-size:30px;
       color:#0679FF;
       margin-top:1rem;
-      margin-bottom:1rem;
+
     `,
     UserImage:styled.img`
     
     width:15rem;
     height:15rem;
-    margin-top: 1rem;
+    
     `,
     
     UserFollow:styled.div`
@@ -62,7 +64,19 @@ const Styled={
     color:white;
     border-radius: 5px;
     font-size: 15px;
+
+
 `,
+
+    CloseButton:styled.button`
+        width:1rem;
+        height:1rem;
+        color: gray;
+        font-size:25px;
+        position: relative;
+        left:22rem;
+        
+    `
 
 
 }

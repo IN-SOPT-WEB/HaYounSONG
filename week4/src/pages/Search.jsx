@@ -16,9 +16,6 @@ function Search() {
       <GlobalStyles/>
       <Styled.Container>
       <Header></Header>
-        
-      {/* {userData[0]?.name} */}
-
       </Styled.Container>
       </>
    

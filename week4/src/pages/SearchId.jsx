@@ -5,20 +5,20 @@ import styled from 'styled-components';
 import Content from '../components/Content/Content';
 import GlobalStyles from '../components/GlobalStyles';
 import Header from '../components/Header/Header';
-
+import axios from "axios"
 export default function SearchId() {
 
   const [userData,setuserData]=useState({})
   const {postId}=useParams();
-  console.log(postId);
+  async function gitHubprofile(){
+    const response = await axios.get(`https://api.github.com/users/${postId}`)
+    setuserData(response.data)
+  }
   useEffect(()=>{
 
-  fetch("/url")
-  .then((response) => response.json())
-  .then((data) => {
-  setuserData(data)});
+    gitHubprofile()
   
-},[])
+  },[postId])
 
   return (
     <>
@@ -26,7 +26,6 @@ export default function SearchId() {
       <Styled.Container>
       <Header></Header>
       <Content userData={userData}></Content>
-      {/* {userData[0]?.name} */}
 
       </Styled.Container>
       </>
