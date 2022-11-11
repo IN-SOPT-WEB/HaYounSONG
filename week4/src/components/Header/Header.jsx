@@ -24,10 +24,10 @@ const Styled={
     `,
     HeaderZone:styled.header`
         width:30rem;
-        height:15rem;
+        height:13rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        margin-top:5rem;
+        margin-top:1rem;
         
     `}

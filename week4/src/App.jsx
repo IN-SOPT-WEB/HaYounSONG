@@ -1,28 +1,30 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import './App.css';
+import Content from './components/Content/Content';
 import GlobalStyles from './components/GlobalStyles';
 import Header from './components/Header/Header';
-
+import { BrowserRouter, Routes, Route,Outlet,useParams } from "react-router-dom";
+import Search from './pages/Search';
+import SearchId from './pages/SearchId';
 function App() {
-  const [userData,setuserData]=useState({})
-  useEffect(()=>{
-
-  fetch("/url")
-  .then((response) => response.json())
-  .then((data) => {
-  setuserData(data)});
-},[])
+  const [userId,setuserId]=useState('hayounSong')
+  
+  
   return (
     <>
-      <GlobalStyles/>
-      <Styled.Container>
-      <Header></Header>
-      {/* {userData[0]?.name} */}
-
-      </Styled.Container>
-      </>
+     
+   <BrowserRouter>
+   <Outlet/>
+    <Routes>
    
+    <Route path="/search" element={<Search></Search>}></Route>
+    <Route path="/search/:postId" element={<SearchId/>}/>
+   {/* 이거를 /search안에다가 넣고 싶었으나.Outlet쓰고도 도저히 작동되지 않아 일단 밖에 빼놨습니다 ㅜㅜ */}
+    
+   </Routes>
+
+   </BrowserRouter>
+   </>
   );
 }
 
