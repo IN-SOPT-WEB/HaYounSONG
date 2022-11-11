@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom';
-export default function SearchInput({searchHistory,setsearchHistory}){
+export default function SearchInput({searchHistory=[],setsearchHistory}){
     const navigate=useNavigate();
     const [onFocus,setonFocus]=useState(false)  
 
     useEffect(()=>{
 
         console.log(setsearchHistory)
-    })
+    },[setsearchHistory])
     
 
 
@@ -22,18 +22,20 @@ export default function SearchInput({searchHistory,setsearchHistory}){
         }
     }
     
-    const HistoryDelete=(name)=>{
+    const HistoryDelete=(name,e)=>{
+        e.stopPropagation();
         console.log(name)
         setsearchHistory(searchHistory.filter((content)=>content!=name))
-        navigate('/search')
+
     }
 
     return (
      
-        <>        <Styled.searchInput  onBlur={()=>{setonFocus(false)}} onFocus={()=>{setonFocus(true)}} onKeyUp={(e)=>SearchGithub(e)} placeholder='Github Username...'></Styled.searchInput>
+        <>
+        <Styled.searchInput  onBlur={()=>{setonFocus(false)}} onFocus={()=>{setonFocus(true)}} onKeyUp={(e)=>SearchGithub(e)} placeholder='Github Username...'></Styled.searchInput>
         <Styled.FocusContentList>
         {onFocus?
-    searchHistory.map((num)=>(<Styled.FoucsContent onBlur={()=>{setonFocus(false)}}onMouseDown={()=>{navigate(`/search/${num}`)}}>{num}<Styled.FocusContentDelete onMouseDown={()=>HistoryDelete(num)}>X</Styled.FocusContentDelete></Styled.FoucsContent>)):(<></>)    
+    searchHistory.map((num)=>(<Styled.FoucsContent onBlur={()=>{setonFocus(false)}}onMouseDown={()=>{navigate(`/search/${num}`)}}>{num}<Styled.FocusContentDelete onMouseDown={(e)=>HistoryDelete(num,e)}>X</Styled.FocusContentDelete></Styled.FoucsContent>)):(<></>)    
     }
         </Styled.FocusContentList>
         </>

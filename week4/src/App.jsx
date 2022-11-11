@@ -14,7 +14,7 @@ function App() {
     <Routes>
    
     <Route path="/search" element={<Search searchHistory={searchHistory} setsearchHistory={setsearchHistory}></Search>}></Route>
-    <Route path="/search/:postId" element={<SearchId/>}searchHistory={searchHistory} setsearchHistory={setsearchHistory}/>
+    <Route path="/search/:postId" element={<SearchId searchHistory={searchHistory} setsearchHistory={setsearchHistory} />}/>
    {/* 이거를 /search안에다가 넣고 싶었으나.Outlet쓰고도 도저히 작동되지 않아 일단 밖에 빼놨습니다 ㅜㅜ */}
     
    </Routes>

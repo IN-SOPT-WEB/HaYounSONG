@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import SearchInput from './SearchInput'
 export default function Header({searchHistory,setsearchHistory}){
-    
+    console.log(setsearchHistory)
     return (
      
       <Styled.HeaderZone>
