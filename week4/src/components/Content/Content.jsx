@@ -24,7 +24,9 @@ export default function Content({userData}){
         팔로잉:{userData.following}
 
     </Styled.UserFollow>
-    <Styled.Userlink>깃허브 바로가기</Styled.Userlink>
+    
+    <Styled.Userlink onClick={()=>{window.open(`https://github.com/${userData.name}`)}} >깃허브 바로가기</Styled.Userlink>
+    
     </Styled.Content>
       
     )
