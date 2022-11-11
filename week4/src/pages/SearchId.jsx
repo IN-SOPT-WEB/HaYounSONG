@@ -6,8 +6,8 @@ import Content from '../components/Content/Content';
 import GlobalStyles from '../components/GlobalStyles';
 import Header from '../components/Header/Header';
 import axios from "axios"
-export default function SearchId() {
-
+export default function SearchId({searchHistory,setsearchHistory}) {
+  
   const [userData,setuserData]=useState({})
   const {postId}=useParams();
   async function gitHubprofile(){
@@ -19,12 +19,12 @@ export default function SearchId() {
     gitHubprofile()
   
   },[postId])
-
+  
   return (
     <>
       <GlobalStyles/>
       <Styled.Container>
-      <Header></Header>
+      <Header searchHistory={searchHistory} setsearchHistory={setsearchHistory}></Header>
       <Content userData={userData}></Content>
 
       </Styled.Container>

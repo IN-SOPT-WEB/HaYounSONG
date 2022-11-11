@@ -13,7 +13,6 @@ export default function Content({userData}){
      
     <Styled.Content>
     <Styled.CloseButton onClick={()=>CloseUserinfo()} >X</Styled.CloseButton>
-    {/* {userData[0]?.name} */}
     <Styled.UserImage src={userData.avatar_url}></Styled.UserImage>
     <Styled.UserName>{userData.name}</Styled.UserName>
     

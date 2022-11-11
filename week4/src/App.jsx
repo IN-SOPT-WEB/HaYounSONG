@@ -4,9 +4,8 @@ import { BrowserRouter, Routes, Route,Outlet,useParams } from "react-router-dom"
 import Search from './pages/Search';
 import SearchId from './pages/SearchId';
 function App() {
-  const [userId,setuserId]=useState('hayounSong')
-  
-  
+ 
+  const [searchHistory,setsearchHistory]=useState([])
   return (
     <>
      
@@ -14,8 +13,8 @@ function App() {
    <Outlet/>
     <Routes>
    
-    <Route path="/search" element={<Search></Search>}></Route>
-    <Route path="/search/:postId" element={<SearchId/>}/>
+    <Route path="/search" element={<Search searchHistory={searchHistory} setsearchHistory={setsearchHistory}></Search>}></Route>
+    <Route path="/search/:postId" element={<SearchId/>}searchHistory={searchHistory} setsearchHistory={setsearchHistory}/>
    {/* 이거를 /search안에다가 넣고 싶었으나.Outlet쓰고도 도저히 작동되지 않아 일단 밖에 빼놨습니다 ㅜㅜ */}
     
    </Routes>

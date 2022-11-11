@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import GlobalStyles from '../components/GlobalStyles';
 import Header from '../components/Header/Header';
-function Search() {
+function Search({searchHistory,setsearchHistory}) {
   const [userData,setuserData]=useState({})
+  
   useEffect(()=>{
 
   fetch("/url")
@@ -15,7 +16,7 @@ function Search() {
     <>
       <GlobalStyles/>
       <Styled.Container>
-      <Header></Header>
+      <Header searchHistory={searchHistory||[]} setsearchHistory={setsearchHistory}></Header>
       </Styled.Container>
       </>
    

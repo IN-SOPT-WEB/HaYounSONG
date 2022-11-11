@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import SearchInput from './SearchInput'
-export default function Header(){
- 
+export default function Header({searchHistory,setsearchHistory}){
+    
     return (
      
       <Styled.HeaderZone>
       <Styled.HeaderText>Find friends GitHub!</Styled.HeaderText>
-      <SearchInput></SearchInput>
+      <SearchInput searchHistory={searchHistory} setsearchHistory={setsearchHistory}></SearchInput>
       </Styled.HeaderZone>
      
       
@@ -29,5 +29,5 @@ const Styled={
         flex-direction: column;
         justify-content: space-around;
         margin-top:1rem;
-        left:22rem;
+        
     `}
