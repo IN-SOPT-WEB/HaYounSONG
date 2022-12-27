@@ -7,7 +7,7 @@ import WritePage from './pages/WritePage';
 import GlobalStyles from './style/GlobalStyle';
 function App() {
 
-  let number:string='asdf';
+
   
   return (
     <div className="App">
