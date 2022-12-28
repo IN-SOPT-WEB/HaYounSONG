@@ -1,5 +1,6 @@
-
+import Header from "./MainPage/Header"
 import styled from "styled-components"
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 interface LetterType {
     body:string,
     email: string,
@@ -13,14 +14,31 @@ type LetterProps = {
     props : LetterType 
   }
 export default function LetterDetail(props:LetterProps){
-
-
+    const navigate:NavigateFunction=useNavigate();
+    const letterData:LetterType=props.props;
+    
+    const BackClicked=():void=>{
+        navigate(-1);
+    }
     return(
         <>
-        {props.props===undefined?<>로딩중입니다</>:
+        <Header></Header>
+        {letterData===undefined?<>로딩중입니다</>:
         
-        <Styled.LetterDetail>{props.props.id}</Styled.LetterDetail>}
-
+        <Styled.LetterPage>
+        <Styled.LetterDetail>
+            <Styled.LetterContent>
+            {letterData.body}
+            </Styled.LetterContent>
+            <Styled.LetterWriter>
+                {letterData.name} 작성
+            </Styled.LetterWriter>
+            <Styled.BackButton onClick={()=>BackClicked()}>돌아가기</Styled.BackButton>
+            </Styled.LetterDetail>
+            
+            </Styled.LetterPage>
+        }
+        
 
         </>
     
@@ -29,6 +47,35 @@ export default function LetterDetail(props:LetterProps){
 
 
 const Styled={
-    LetterDetail:styled.main`
+    LetterPage:styled.main`
+    width:100%;
+    margin-top:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;`
+    
+    ,
+    LetterDetail:styled.div`
+    width:700px;
+    height:400px;
+    background-color: white;
+    color:#006EFF;
+    border:5px solid #006EFF;
+    `,
+    LetterWriter:styled.div`
+    
+    margin-top:200px;
+    font-weight: bold;
+    font-size:30px;
+    `,
+    LetterContent:styled.div`
+    margin-top:50px;
+    `,
+    BackButton:styled.button`
+    margin-top:10px;
+    background-color: #006EFF;
+    color:white;
+    padding:10px 15px;
+    font-weight: bold;
     `
 }

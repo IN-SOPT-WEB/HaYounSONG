@@ -50,4 +50,5 @@ const Styled={
         font-weight: bolder;
         border-radius: 30px;
     `,
+    
 }
