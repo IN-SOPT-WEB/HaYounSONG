@@ -9,7 +9,6 @@ export default function Letters(){
         id:number,
         name:string,
         postId:number
-    
       }
     const navigate=useNavigate();
     const [letterList,setletterList]=useState<LetterType[]>([]);
@@ -18,10 +17,9 @@ export default function Letters(){
         setletterList(response.data);
     }
     const letterClicked=(letter:LetterType):void=>{
-        console.log(letter);
+
         navigate(`/${letter.id}`)
     }
-
     useEffect(()=>{
         getLetter();
     },[])
