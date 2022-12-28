@@ -1,13 +1,7 @@
 import Header from "./MainPage/Header"
 import styled from "styled-components"
 import { NavigateFunction, useNavigate } from 'react-router-dom';
-interface LetterType {
-    body:string,
-    email: string,
-    id:number,
-    name:string,
-    postId:number
-  }
+import LetterType from "../types/LetterType";
 
   // 이거를 공통으로 사용하면 좋을 것 같습니다..! 
 type LetterProps = {

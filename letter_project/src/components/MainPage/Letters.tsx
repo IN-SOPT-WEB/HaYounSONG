@@ -2,14 +2,9 @@ import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
+import LetterType from "../../types/LetterType";
 export default function Letters(){
-    interface LetterType {
-        body:string,
-        email: string,
-        id:number,
-        name:string,
-        postId:number
-      }
+
     const navigate=useNavigate();
     const [letterList,setletterList]=useState<LetterType[]>([]);
     const getLetter=async():Promise<void>=>{
@@ -50,5 +45,5 @@ const Styled={
         font-weight: bolder;
         border-radius: 30px;
     `,
-    
+
 }
